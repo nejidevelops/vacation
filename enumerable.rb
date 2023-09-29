@@ -28,9 +28,9 @@ class MyList
     @list = elements
   end
 
-  def each
+  def each(&block)
     @list.each do |element|
-      yield element
+      block.call(element)
     end
   end
 end
@@ -40,17 +40,13 @@ list = MyList.new(1, 2, 3, 4)
 puts list.inspect
 
 # Test #all?
-puts list.all? { |e| e < 5 }
-# Should return true
-puts list.all? { |e| e > 5 }
-# Should return false
+puts(list.all? { |e| e < 5 }) # Should return true
+puts(list.all? { |e| e > 5 }) # Should return false
 
 # Test #any?
-puts list.any? { |e| e == 2 }
-# Should return true
-puts list.any? { |e| e == 5 }
-# Should return false
+puts(list.any? { |e| e == 2 }) # Should return true
+puts(list.any? { |e| e == 5 }) # Should return false
 
 # Test #filter
 # Should return [2, 4]
-p list.filter { |e| e.even? }
+p list.filter(&:even?)
