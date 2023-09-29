@@ -27,3 +27,9 @@ class MyList
   def initialize(*elements)
     @list = elements
   end
+  def each
+    @list.each do |element|
+      yield element
+    end
+  end
+end
