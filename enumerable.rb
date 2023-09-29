@@ -52,5 +52,5 @@ puts list.any? { |e| e == 5 }
 # Should return false
 
 # Test #filter
-p list.filter { |e| e.even? }
 # Should return [2, 4]
+p list.filter { |e| e.even? }
