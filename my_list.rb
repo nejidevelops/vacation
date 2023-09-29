@@ -6,9 +6,9 @@ class MyList
     @list = elements
   end
 
-  def each
+  def each(&block)
     @list.each do |element|
-      yield element
+      block.call(element)
     end
   end
 end
