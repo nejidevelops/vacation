@@ -13,12 +13,12 @@ class MorseCodeDecoder
   def self.decode_char(morse_char)
     MORSE_CODE.key(morse_char)
   end
-end
 
-def self.decode_word(morse_word)
-  morse_word.split(' ').map { |morse_char| decode_char(morse_char) }.join
-end
+  def self.decode_word(morse_word)
+    morse_word.split(' ').map { |morse_char| decode_char(morse_char) }.join
+  end
 
-def self.decode_message(morse_message)
-  morse_message.split('   ').map { |morse_word| decode_word(morse_word) }.join(' ')
-  end
+  def self.decode_message(morse_message)
+    morse_message.split('   ').map { |morse_word| decode_word(morse_word) }.join(' ')
+  end
+end
