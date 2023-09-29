@@ -23,6 +23,6 @@ class MorseCodeDecoder
   end
 end
 
-morse_message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+morse_message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 decoded_message = MorseCodeDecoder.decode_message(morse_message)
 puts decoded_message
