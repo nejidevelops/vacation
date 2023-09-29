@@ -1,5 +1,5 @@
-require_relative 'my_list.rb'
-require_relative 'my_enumerable.rb'
+require_relative 'my_list'
+require_relative 'my_enumerable'
 
 # Create our list
 list = MyList.new(1, 2, 3, 4)
