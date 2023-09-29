@@ -7,8 +7,10 @@ class MyList
   end
 
   def each
-    @list.each do |element|
-      yield element
+    def each(&block)
+      @list.each do |element|
+        block.call(element)
+      end
     end
   end
 end
